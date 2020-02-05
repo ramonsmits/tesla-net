@@ -5,7 +5,6 @@ namespace Tesla.NET
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Net.Http;
     using System.Threading;
     using System.Threading.Tasks;
@@ -144,6 +143,21 @@ namespace Tesla.NET
                 throw new ArgumentNullException(nameof(accessToken));
 
             return Client.GetClimateStateAsync(BaseUri, vehicleId, accessToken, cancellationToken);
+        }
+
+        /// <inheritdoc />
+        public Task<IMessageResponse<IResponseDataWrapper<IVehicleConfig>>> GetVehicleConfigAsync(long vehicleId, CancellationToken cancellationToken = default)
+        {
+            return Client.GetVehicleConfigAsync(BaseUri, vehicleId, cancellationToken: cancellationToken);
+        }
+
+        /// <inheritdoc />
+        public Task<IMessageResponse<IResponseDataWrapper<IVehicleConfig>>> GetVehicleConfigAsync(long vehicleId, string accessToken, CancellationToken cancellationToken = default)
+        {
+            if (string.IsNullOrWhiteSpace(accessToken))
+                throw new ArgumentNullException(nameof(accessToken));
+
+            return Client.GetVehicleConfigAsync(BaseUri, vehicleId, accessToken, cancellationToken);
         }
     }
 }

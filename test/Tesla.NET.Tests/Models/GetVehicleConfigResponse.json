@@ -1,0 +1,27 @@
+{
+  "response": {
+    "can_accept_navigation_requests": true,
+    "can_actuate_trunks": true,
+    "car_special_type": "base",
+    "car_type": "models",
+    "charge_port_type": "EU",
+    "eu_vehicle": true,
+    "exterior_color": "SteelGrey",
+    "has_air_suspension": true,
+    "has_ludicrous_mode": false,
+    "motorized_charge_port": false,
+    "plg": true,
+    "rear_seat_heaters": 0,
+    "rear_seat_type": 1,
+    "rhd": false,
+    "roof_color": "None",
+    "seat_type": 1,
+    "spoiler_type": "None",
+    "sun_roof_installed": 2,
+    "third_row_seats": "None",
+    "timestamp": 1580889199146,
+    "trim_badging": "85d",
+    "use_range_badging": false,
+    "wheel_type": "Base19"
+  }
+}
